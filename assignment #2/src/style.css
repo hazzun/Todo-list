@@ -1,0 +1,11 @@
+body{
+    background-color: violet;
+    color: white;
+    transition: color .5s ease-in-out;
+}
+.bigSize{
+    background-color: orange;
+}
+.smallSize{
+    background-color: royalblue;
+}

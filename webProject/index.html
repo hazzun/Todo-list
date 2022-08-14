@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>momentum app clone</title>
+</head>
+
+<body>
+    <img src="" />
+    <main>
+        <h2 id="clock">00:00:00</h2>
+        <h2 id="date">0000년 00월 00일</h2>
+        <form class="login-form hidden">
+            <!-- input의 유효성 검사를 하기 위해서는input이 form안에 있어야함 -->
+            <input class="input-name" required maxlength="15" type="text" placeholder="What's your name?" />
+            <input class="input-btn" type="submit" value="save" />
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input class="input-todo" type="text" placeholder="write a to do list 🗓" />
+        </form>
+        <ul id="todo-list"></ul>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+    </main>
+    <footer>
+        <form id="logout" class="logout-form">
+            <input class="logout-btn" type="submit" value="logout" />
+        </form>
+        <div id="quote" class="quote">
+            <span></span>
+            <span></span>
+        </div>
+    </footer>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/backgroung.js"></script>
+    <script src="js/todo.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
+    <script src="https://kit.fontawesome.com/493cc16663.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

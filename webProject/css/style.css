@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import "reset.css";
+
+.hidden{
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* opacity: 0.5; */
+    animation: fadeIn 0.5s ease-in-out;
+}
+main{
+    font-family: 'Silkscreen', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+#clock{
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    animation: fadeIn 1s linear;
+}
+#date{
+    /* margin-top: 30px; */
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    animation: fadeIn 1s linear;
+}
+.login-form{
+    margin: 50px;
+}
+#greeting{
+    margin: 50px 0 15px 0;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+.input-name,
+.input-btn,
+.input-todo{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    padding: 10px 40px;
+    font-size: 15px;
+    text-align: center;
+    opacity: 0.8;
+    color: gray;
+    margin-bottom: 15px;
+}
+.todo-checkbox{
+    animation: fadeIn 1s linear;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    color: white;
+}
+li span{
+    margin-left: 15px;
+}
+.fa-trash-can:hover,
+.logout-btn:hover{
+    cursor: pointer;
+}
+
+
+footer{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+/* .logout-form{
+    position: absolute;
+    display: block;
+} */
+.logout-btn{
+    /* right: 10px; */
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    color: gray;
+    padding: 5 30px;
+}
+.quote{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    padding: 5px 15px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quote span{
+    margin-top: 3px;
+}
