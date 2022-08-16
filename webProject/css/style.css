@@ -25,6 +25,9 @@ img{
     /* opacity: 0.5; */
     animation: fadeIn 0.5s ease-in-out;
 }
+/* body{
+    height: 100vh;
+} */
 main,
 body{
     font-family: 'Silkscreen', cursive;
@@ -35,16 +38,39 @@ body{
     height: 100vh;
     position: relative;
 }
+.screen-header{
+    top: 0;
+    position: fixed;
+    padding: 5px 3px;
+    width: 100%;
+    /* display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box; */
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
 #clock{
-    margin-bottom: 60px;
-    font-size: 25px;
+    justify-self: center;
+    align-self: center;
+    font-size: 18px;
     font-weight: 600;
     color: white;
     animation: fadeIn 1s linear;
 }
+.logout-form{
+    justify-self: end;
+    align-self: center;
+}
+.logout-btn{
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    color: gray;
+}
 #date{
     /* margin-top: 30px; */
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 900;
     color: white;
     animation: fadeIn 1s linear;
@@ -54,7 +80,7 @@ body{
 }
 #greeting{
     margin: 50px 0 15px 0;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 900;
     color: white;
     animation: fadeIn 2s ease-in-out;
@@ -64,7 +90,7 @@ body{
 .input-todo{
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 40px;
-    padding: 10px 40px;
+    padding: 10px 20px;
     font-size: 15px;
     text-align: center;
     opacity: 0.8;
@@ -92,23 +118,17 @@ li span{
 
 footer{
     display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
+    width: 50%;
+    /* position: absolute; */
+    position: fixed;
+    bottom: 5px;
     text-align: center;
+    box-sizing: border-box;
 }
 /* .logout-form{
     position: absolute;
     display: block;
 } */
-.logout-btn{
-    /* right: 10px; */
-    background-color: white;
-    border: 1px solid whitesmoke;
-    border-radius: 20px;
-    color: gray;
-    padding: 5 30px;
-}
 .quote{
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 7px;

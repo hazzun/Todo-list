@@ -11,14 +11,19 @@
 
 <body>
     <img src="" />
-    <main>
+    <header class="screen-header">
+        <span></span>
         <h2 id="clock">00:00:00</h2>
+        <form id="logout" class="logout-form">
+            <input class="logout-btn" type="submit" value="logout" />
+        </form>
+    </header>
+    <main>
         <h2 id="date">0000년 00월 00일</h2>
-        <p>test</p>
         <form class="login-form hidden">
             <!-- input의 유효성 검사를 하기 위해서는input이 form안에 있어야함 -->
-            <input class="input-name" required maxlength="15" type="text" placeholder="What's your name?" />
-            <input class="input-btn" type="submit" value="save" />
+            <input class="input-name" required maxlength="15" type="text" placeholder="이름을 입력하세요" />
+            <input class="input-btn" type="submit" value="시작" />
         </form>
         <h1 id="greeting" class="hidden"></h1>
         <form id="todo-form">
@@ -31,9 +36,6 @@
         </div>
     </main>
     <footer>
-        <form id="logout" class="logout-form">
-            <input class="logout-btn" type="submit" value="logout" />
-        </form>
         <div id="quote" class="quote">
             <span></span>
             <span></span>
