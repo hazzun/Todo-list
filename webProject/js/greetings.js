@@ -4,7 +4,7 @@ const loginInput = document.querySelector(".login-form input");
 // console.dir(loginInput);
 const greeting = document.querySelector("#greeting");
 // console.log(greeting);
-const logout = document.querySelector("#logout");
+const logout = document.querySelector(".logout-form");
 
 const inputTodo = document.querySelector("#todo-form input");
 
@@ -24,8 +24,13 @@ function loginClick(event) {
 }
 
 function paintGreeting(username) {
-    greeting.innerText = `Hello, ${username} 👋🏻`;
+    const span = document.createElement("span");
+    span.classList.add("waving-hand");
+    span.innerText = `👋🏻`;
+    greeting.innerText = `Hello, ${username}`;
+    greeting.appendChild(span);
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    logout.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -43,7 +48,7 @@ if (savedUsername === null) {
 
 
 function logoutClick() {
-    alert("로그아웃하시면 모든 정보가 사라집니다\n정말로 하시겠습니까?")
+    alert("로그아웃하시면 모든 정보가 사라집니다\n정말로 하실건가용?")
     localStorage.removeItem(USERNAME_KEY);
     localStorage.removeItem("todos");
 }

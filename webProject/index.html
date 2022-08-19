@@ -9,30 +9,35 @@
     <title>momentum app clone</title>
 </head>
 
-<body>
+<body class="container">
     <img src="" />
-    <main>
+    <header class="screen-header">
+        <span></span>
         <h2 id="clock">00:00:00</h2>
+        <form id="logout" class="logout-form hidden">
+            <input class="logout-btn" type="submit" value="logout" />
+        </form>
+    </header>
+    <main id="main">
         <h2 id="date">0000년 00월 00일</h2>
         <form class="login-form hidden">
             <!-- input의 유효성 검사를 하기 위해서는input이 form안에 있어야함 -->
-            <input class="input-name" required maxlength="15" type="text" placeholder="What's your name?" />
-            <input class="input-btn" type="submit" value="save" />
+            <input class="input-name" required maxlength="15" type="text" placeholder="이름을 입력하세요" />
+            <!-- <input class="input-btn" type="submit" value="시작" /> -->
         </form>
         <h1 id="greeting" class="hidden"></h1>
         <form id="todo-form">
-            <input class="input-todo" type="text" placeholder="write a to do list 🗓" />
+            <input class="input-todo" type="text" placeholder="오늘의 할 일 🗓" />
         </form>
-        <ul id="todo-list"></ul>
+        <div class="todo-list-box">
+            <ul id="todo-list"></ul>
+        </div>
         <div id="weather">
             <span></span>
             <span></span>
         </div>
     </main>
     <footer>
-        <form id="logout" class="logout-form">
-            <input class="logout-btn" type="submit" value="logout" />
-        </form>
         <div id="quote" class="quote">
             <span></span>
             <span></span>

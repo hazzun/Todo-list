@@ -16,6 +16,32 @@
         opacity: 1;
     }
 }
+@keyframes wavingHand {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(20deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
 
 img{
     position: absolute;
@@ -25,56 +51,102 @@ img{
     /* opacity: 0.5; */
     animation: fadeIn 0.5s ease-in-out;
 }
-main{
+#main,
+.container{
     font-family: 'Silkscreen', cursive;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     height: 100vh;
     position: relative;
 }
+.screen-header{
+    top: 0;
+    position: fixed;
+    padding: 5px 3px;
+    width: 100%;
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box; */
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    z-index: 100;
+}
 #clock{
-    margin-bottom: 60px;
-    font-size: 25px;
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
     font-weight: 600;
     color: white;
     animation: fadeIn 1s linear;
+    text-shadow: -2px 2px 2px gray;
+}
+.logout-form{
+    justify-self: end;
+    align-self: center;
+}
+.logout-btn{
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    color: gray;
 }
 #date{
-    /* margin-top: 30px; */
-    font-size: 35px;
+    /* padding-bottom: 50px; */
+    margin-top: 200px;
+    font-size: 45px;
     font-weight: 900;
     color: white;
     animation: fadeIn 1s linear;
+    text-shadow: -2px 2px 2px gray;
 }
 .login-form{
     margin: 50px;
 }
 #greeting{
-    margin: 50px 0 15px 0;
+    margin-top: 50px;
     font-size: 35px;
     font-weight: 900;
     color: white;
     animation: fadeIn 2s ease-in-out;
+    text-shadow: -1px 1px 1px black;
 }
 .input-name,
 .input-btn,
 .input-todo{
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 40px;
-    padding: 10px 40px;
+    padding: 10px 20px;
     font-size: 15px;
     text-align: center;
     opacity: 0.8;
     color: gray;
-    margin-bottom: 15px;
+    margin: 15px;
+}
+.waving-hand{
+    margin-left: 5px;
+    display: inline-block;
+    animation: wavingHand 2.5s infinite;
+}
+.todo-list-box{
+    position: relative;
+}
+#todo-list{
+    max-height: 190px;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+    padding-bottom: 30px;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 .todo-checkbox{
     animation: fadeIn 1s linear;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color:rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     margin-bottom: 5px;
     padding: 10px 20px;
@@ -92,32 +164,44 @@ li span{
 footer{
     display: block;
     width: 100%;
-    position: absolute;
-    bottom: 10px;
+    /* position: absolute; */
+    position: fixed;
+    bottom: 5px;
     text-align: center;
+    box-sizing: border-box;
 }
 /* .logout-form{
     position: absolute;
     display: block;
 } */
-.logout-btn{
-    /* right: 10px; */
-    background-color: white;
-    border: 1px solid whitesmoke;
-    border-radius: 20px;
-    color: gray;
-    padding: 5 30px;
-}
 .quote{
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 7px;
     padding: 5px 15px;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #quote span{
     margin-top: 3px;
+}
+
+@media only screen and (max-width: 767px){
+    /* .container{
+        padding: 15px;
+    } */
+    .screen-header{
+        padding: 15px;
+    }
+    #clock{
+        font-size: 18px;
+    }
+    #date{
+        font-size: 25px;
+    }
+    #greeting{
+        font-size: 25px;
+    }
 }
