@@ -121,12 +121,22 @@ img{
     text-align: center;
     opacity: 0.8;
     color: gray;
-    margin-top: 15px;
+    margin: 15px;
 }
 .waving-hand{
     margin-left: 5px;
     display: inline-block;
     animation: wavingHand 2.5s infinite;
+}
+.todo-list-box{
+    position: relative;
+}
+#todo-list{
+    max-height: 190px;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+    padding-bottom: 30px;
 }
 .todo-checkbox{
     animation: fadeIn 1s linear;
