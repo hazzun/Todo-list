@@ -48,7 +48,7 @@ if (savedUsername === null) {
 
 
 function logoutClick() {
-    alert("로그아웃하시면 모든 정보가 사라집니다\n정말로 하시겠습니까?")
+    alert("로그아웃하시면 모든 정보가 사라집니다\n정말로 하실건가용?")
     localStorage.removeItem(USERNAME_KEY);
     localStorage.removeItem("todos");
 }
