@@ -3,4 +3,4 @@
 
 
 체험해보기
-https://hazzun.github.io/todo-list/webProject/index.html
+https://hazzun.github.io/Todo-list/webProject/index.html
